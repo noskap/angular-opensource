@@ -1,10 +1,12 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {IBusyConfig} from '../model/busy-config';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class InstanceConfigHolderService {
-  public config: IBusyConfig;
-  constructor() { }
+    public config: IBusyConfig;
+
+    constructor() {
+    }
 }
