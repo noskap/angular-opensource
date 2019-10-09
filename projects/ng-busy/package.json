@@ -1,5 +1,5 @@
 {
-  "name": "ng-busy",
+  "name": "ng-busy-observable",
   "version": "6.2.1",
   "description": "Show busy/loading indicators on any promise or subscription",
   "author": "noskap",
