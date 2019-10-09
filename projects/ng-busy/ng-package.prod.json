@@ -4,5 +4,10 @@
   "lib": {
     "entryFile": "src/public_api.ts"
   },
-  "whitelistedNonPeerDependencies": ["rxjs", "@angular/common", "@angular/core", "@angular/animations"]
+  "whitelistedNonPeerDependencies": [
+    "rxjs",
+    "@angular/common",
+    "@angular/core",
+    "@angular/animations"
+  ]
 }
