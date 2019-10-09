@@ -1,0 +1,36 @@
+import { ApplicationRef, ComponentFactoryResolver, DoCheck, ElementRef, EventEmitter, Injector, OnDestroy, Renderer2, TemplateRef, Type, ViewContainerRef } from '@angular/core';
+import { BusyTrackerService } from './service/busy-tracker.service';
+import { BusyConfigHolderService } from './service/busy-config-holder.service';
+import { InstanceConfigHolderService } from './service/instance-config-holder.service';
+export declare class NgBusyDirective implements DoCheck, OnDestroy {
+    private configHolder;
+    private instanceConfigHolder;
+    private resolver;
+    private tracker;
+    private appRef;
+    private vcr;
+    private element;
+    private renderer;
+    private injector;
+    options: any;
+    busyStart: EventEmitter<{}>;
+    busyStop: EventEmitter<{}>;
+    private optionsNorm;
+    private busyRef;
+    private componentViewRef;
+    private onStartSubscription;
+    private onStopSubscription;
+    private isLoading;
+    private busyEmitter;
+    template: TemplateRef<any> | Type<any>;
+    templateNgStyle: {};
+    private _option;
+    constructor(configHolder: BusyConfigHolderService, instanceConfigHolder: InstanceConfigHolderService, resolver: ComponentFactoryResolver, tracker: BusyTrackerService, appRef: ApplicationRef, vcr: ViewContainerRef, element: ElementRef, renderer: Renderer2, injector: Injector);
+    ngDoCheck(): void;
+    ngOnDestroy(): void;
+    private recreateBusyIfNecessary;
+    private normalizeOptions;
+    private destroyComponents;
+    private createBusy;
+    private generateNgContent;
+}
