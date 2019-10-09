@@ -11,7 +11,7 @@
 
 ![demo](https://raw.githubusercontent.com/devyumao/devyumao.github.io/master/angular2-busy/img/demo.gif)
 
-Rewritten from [angular2-busy](https://github.com/devyumao/angular2-busy), and add some new features in terms of Angular 2.
+Rewritten from [ng-busy](https://github.com/victos/angular-opensource/tree/master/projects/ng-busy), to allow plain observables.
 
 ### Built with Angular 6.0.0
 
@@ -22,13 +22,13 @@ Rewritten from [angular2-busy](https://github.com/devyumao/angular2-busy), and a
 ## Installation
 
 ```shell
-npm install --save ng-busy
+npm install --save ng-busy-observable
 ```
 
 ## Link CSS
 
 ```html
-<link rel="stylesheet" href="/node_modules/ng-busy/src/style/busy.css">
+<link rel="stylesheet" href="/node_modules/ng-busy-observable/src/style/busy.less">
 ```
 
 ## Getting Started
@@ -38,7 +38,7 @@ Import the `NgBusyModule` in your root application module:
 ```ts
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgBusyModule} from 'ng-busy';
+import {NgBusyModule} from 'ng-busy-observable';
 
 @NgModule({
 	imports: [
@@ -93,11 +93,30 @@ class SomeComponent implements OnInit {
 }
 ```
 
+The Observable itself is also supported:
+
+```ts
+// ...
+import {Observable} from 'rxjs';
+
+// ...
+class SomeComponent implements OnInit {
+    busy: Observable<any>;
+
+    // ...
+
+    ngOnInit() {
+        this.busy = this.http.get('...');
+    }
+}
+```
+
 ## Directive Syntax
 
 The `ngBusy` directive expects a ***busy thing***, which means:
 - A promise
 - Or an Observable's subscription
+- Or an Observable
 - Or an array of them
 - Or a configuration object
 In other words, you may use flexible syntax:
@@ -135,7 +154,7 @@ In other words, you may use flexible syntax:
 | delay | Optional | 0 | The amount of time to wait until showing the indicator. Specified in milliseconds.
 | minDuration | Optional | 0 | The amount of time to keep the indicator showing even if the busy thing was completed quicker. Specified in milliseconds.|
 | disableAnimation | Optional | false | Disable the animation when the spinner appear |
-| wrapperClass | Optional | 'ng-busy' | The name(s) of the CSS classes to be applied to the wrapper element of the indicator. |
+| wrapperClass | Optional | 'ng-busy-observable' | The name(s) of the CSS classes to be applied to the wrapper element of the indicator. |
 | templateNgStyle | Optional | { } | An object that will be assigned to the custom component assigned to `template` option, if one was configured (see example below in Overriding Defaults). |
 
 
@@ -147,7 +166,7 @@ In the root application module, you can do this:
 
 ```ts
 import {NgModule} from '@angular/core';
-import {NgBusyModule, BusyConfig} from 'ng-busy';
+import {NgBusyModule, BusyConfig} from 'ng-busy-observable';
 import {CustomBusyComponent} from '...'
 
 @NgModule({
@@ -213,7 +232,8 @@ export class CustomBusyComponent {
 
 ## Credits
 
-Rewritten from [devyumao](https://github.com/devyumao)'s [angular2-busy](https://github.com/devyumao/angular2-busy).
+Rewritten from [ng-busy](https://github.com/victos/angular-opensource/tree/master/projects/ng-busy), to allow plain observables.
+Which is also rewritten from [devyumao](https://github.com/devyumao)'s [angular2-busy](https://github.com/devyumao/angular2-busy).
 
 ## LICENSE
 

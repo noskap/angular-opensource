@@ -1,6 +1,6 @@
 {
   "name": "ng-busy-observable",
-  "version": "6.2.1",
+  "version": "6.2.3",
   "description": "Show busy/loading indicators on any promise or subscription",
   "author": "noskap",
   "license": "MIT",
@@ -26,6 +26,7 @@
     "angular2-busy",
     "ng2-busy",
     "ng-busy",
+    "ng-busy-observable",
     "waiting",
     "angular5",
     "angular6"
