@@ -1,11 +1,11 @@
 import {EventEmitter, Injectable, OnDestroy} from '@angular/core';
-import {from, Observable, Subscription, timer} from 'rxjs';
+import {from, Subscription, timer} from 'rxjs';
 import {isPromise} from '../util/isPromise';
 
 export interface TrackerOptions {
     minDuration: number;
     delay: number;
-    busyList: Array<Promise<any> | Subscription | Observable<any>>;
+    busyList: Array<Promise<any> | Subscription>;
 }
 
 @Injectable({
@@ -72,10 +72,10 @@ export class BusyTrackerService implements OnDestroy {
         }
     }
 
-    private loadBusyQueue(busies: Array<Promise<any> | Subscription | Observable<any>>) {
+    private loadBusyQueue(busies: Array<Promise<any> | Subscription>) {
         busies.filter((busy) => {
             return busy && !busy.hasOwnProperty('__loaded_mark_by_ng_busy');
-        }).forEach((busy: Promise<any> | Subscription | Observable<any>) => {
+        }).forEach((busy: Promise<any> | Subscription) => {
             Object.defineProperty(busy, '__loaded_mark_by_ng_busy', {
                 value: true, configurable: false, enumerable: false, writable: false
             });
