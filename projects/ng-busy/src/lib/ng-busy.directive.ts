@@ -114,7 +114,7 @@ export class NgBusyDirective implements DoCheck, OnDestroy {
     }
 
     options.busy = options.busy.map(b => {
-      if (b.hasOwnProperty('toPromise')) {
+      if (b && b.hasOwnProperty('toPromise')) {
         console.log('observable');
         return b.toPromise();
       }
