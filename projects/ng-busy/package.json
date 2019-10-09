@@ -2,7 +2,7 @@
   "name": "ng-busy",
   "version": "6.1.3",
   "description": "Show busy/loading indicators on any promise or subscription",
-  "author": "victos",
+  "author": "noskap",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf ../../dist/ng-busy",
@@ -12,11 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/victos/angular-opensource.git"
+    "url": "git+https://github.com/noskap/angular-opensource.git"
   },
-  "homepage": "https://github.com/victos/angular-opensource/tree/master/projects/ng-busy",
+  "homepage": "https://github.com/noskap/angular-opensource/tree/master/projects/ng-busy",
   "bugs": {
-    "url": "https://github.com/victos/angular-opensource"
+    "url": "https://github.com/noskap/angular-opensource"
   },
   "keywords": [
     "angular",

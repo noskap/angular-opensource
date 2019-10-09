@@ -6,7 +6,7 @@
 
 **NgBusy** can show busy/loading indicators on any promise, or on any Observable's subscription.
 
-[![Travis](https://img.shields.io/travis/victos/angular-opensource/master.svg?label=Travis%20CI&style=flat-square)](https://travis-ci.org/victos/angular-opensource)
+[![Travis](https://img.shields.io/travis/noskap/angular-opensource/master.svg?label=Travis%20CI&style=flat-square)](https://travis-ci.org/noskap/angular-opensource)
 [![npm Downloads](https://img.shields.io/npm/dw/ng-busy.svg?style=flat-square)](https://www.npmjs.com/package/ng-busy)
 
 ![demo](https://raw.githubusercontent.com/devyumao/devyumao.github.io/master/angular2-busy/img/demo.gif)
@@ -17,7 +17,7 @@ Rewritten from [angular2-busy](https://github.com/devyumao/angular2-busy), and a
 
 ## Demo
 
-[https://github.com/victos/angular-opensource/tree/master/projects/ng-busy/](https://github.com/victos/angular-opensource/tree/master/projects/ng-busy/)
+[https://github.com/noskap/angular-opensource/tree/master/projects/ng-busy/](https://github.com/noskap/angular-opensource/tree/master/projects/ng-busy/)
 
 ## Installation
 
@@ -217,4 +217,4 @@ Rewritten from [devyumao](https://github.com/devyumao)'s [angular2-busy](https:/
 
 ## LICENSE
 
-This project is licensed under the MIT license. See the [LICENSE](https://github.com/victos/ng-busy/blob/master/LICENSE) file for more info.
+This project is licensed under the MIT license. See the [LICENSE](https://github.com/noskap/ng-busy/blob/master/LICENSE) file for more info.
