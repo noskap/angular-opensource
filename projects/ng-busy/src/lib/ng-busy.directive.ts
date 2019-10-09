@@ -31,18 +31,15 @@ import {isPromise} from './util/isPromise';
 export class NgBusyDirective implements DoCheck, OnDestroy {
     @Input('ngBusy')
     set options(op) {
-        console.log(op);
         if (Array.isArray(op)) {
             this._option = op.map(b => {
                 // console.log(b);
                 if (b && b.hasOwnProperty('toPromise')) {
-                    console.log('observable');
                     return b.toPromise();
                 }
                 return b;
             });
         } else if (op && op instanceof Observable) {
-            console.log('observable');
             this._option = op.toPromise();
         } else {
             this._option = op;
@@ -133,16 +130,6 @@ export class NgBusyDirective implements DoCheck, OnDestroy {
         if (!Array.isArray(options.busy)) {
             options.busy = [options.busy];
         }
-        // console.log(options);
-        options.busy = options.busy.map(b => {
-            // console.log(b);
-            if (b && b.hasOwnProperty('toPromise')) {
-                console.log('observable');
-                return b.toPromise();
-            }
-            return b;
-        });
-
         return options;
     }
 
