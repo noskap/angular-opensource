@@ -47,14 +47,14 @@ export class NgBusyDirective implements DoCheck, OnDestroy {
   private _option: any;
 
   constructor(private configHolder: BusyConfigHolderService,
-    private instanceConfigHolder: InstanceConfigHolderService,
-    private resolver: ComponentFactoryResolver,
-    private tracker: BusyTrackerService,
-    private appRef: ApplicationRef,
-    private vcr: ViewContainerRef,
-    private element: ElementRef,
-    private renderer: Renderer2,
-    private injector: Injector) {
+              private instanceConfigHolder: InstanceConfigHolderService,
+              private resolver: ComponentFactoryResolver,
+              private tracker: BusyTrackerService,
+              private appRef: ApplicationRef,
+              private vcr: ViewContainerRef,
+              private element: ElementRef,
+              private renderer: Renderer2,
+              private injector: Injector) {
     this.onStartSubscription = tracker.onStartBusy.subscribe(() => {
       setTimeout(() => {
         this.recreateBusyIfNecessary();
@@ -88,8 +88,8 @@ export class NgBusyDirective implements DoCheck, OnDestroy {
 
   private recreateBusyIfNecessary() {
     if (!this.busyRef
-      || this.template !== this.optionsNorm.template
-      || this.templateNgStyle !== this.optionsNorm.templateNgStyle
+        || this.template !== this.optionsNorm.template
+        || this.templateNgStyle !== this.optionsNorm.templateNgStyle
     ) {
       this.destroyComponents();
       this.template = this.optionsNorm.template;
@@ -103,8 +103,8 @@ export class NgBusyDirective implements DoCheck, OnDestroy {
     if (!options) {
       options = { busy: [] };
     } else if (Array.isArray(options)
-      || isPromise(options)
-      || options instanceof Subscription
+        || isPromise(options)
+        || options instanceof Subscription
     ) {
       options = { busy: options };
     }
@@ -112,6 +112,15 @@ export class NgBusyDirective implements DoCheck, OnDestroy {
     if (!Array.isArray(options.busy)) {
       options.busy = [options.busy];
     }
+
+    options.busy = options.busy.map(b => {
+      if (b.hasOwnProperty('toPromise')) {
+        console.log('observable');
+        return b.toPromise();
+      }
+      return b;
+    });
+
     return options;
   }
 
