@@ -1,4 +1,4 @@
-import {Subscription} from 'rxjs';
+import {Observable, Subscription} from 'rxjs';
 import {Component, TemplateRef, Type, Inject, ChangeDetectorRef} from '@angular/core';
 import {InstanceConfigHolderService} from '../service/instance-config-holder.service';
 
@@ -61,7 +61,7 @@ export interface IBusyConfig {
   backdrop?: boolean;
   message?: string;
   wrapperClass?: string;
-  busy?: Array<Promise<any> | Subscription>;
+  busy?: Array<Promise<any> | Subscription | Observable<any>>;
   disableAnimation?: boolean;
 }
 

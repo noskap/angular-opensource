@@ -9,7 +9,7 @@ const prepareService = (service: BusyTrackerService) => {
   service.onStopBusy = new EventEmitter<any>();
   service.onStartBusy = new EventEmitter<any>();
 };
-const prepareOption = (delay: number, minDuration: number, busyList: Array<Promise<any> | Subscription>) => {
+const prepareOption = (delay: number, minDuration: number, busyList: Array<Promise<any> | Subscription | Observable<any>>) => {
   return {
     minDuration: minDuration,
     delay: delay,
