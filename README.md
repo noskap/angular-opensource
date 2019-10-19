@@ -1,13 +1,8 @@
-**Notice**
+**For Angular 6**
 
-1.x version is used for angular 5.x
+NgBusy can show busy/loading indicators on any promise, Observable, or on any Observable's subscription.
 
-6.x version is used for angular 6.x
-
-**NgBusy** can show busy/loading indicators on any promise, or on any Observable's subscription.
-
-[![Travis](https://img.shields.io/travis/noskap/angular-opensource/master.svg?label=Travis%20CI&style=flat-square)](https://travis-ci.org/noskap/angular-opensource)
-[![npm Downloads](https://img.shields.io/npm/dw/ng-busy.svg?style=flat-square)](https://www.npmjs.com/package/ng-busy-observable)
+[![npm Downloads](https://img.shields.io/npm/dw/ng-busy-observable.svg?style=flat-square)](https://www.npmjs.com/package/ng-busy-observable)
 
 ![demo](https://raw.githubusercontent.com/devyumao/devyumao.github.io/master/angular2-busy/img/demo.gif)
 
@@ -17,7 +12,7 @@ Rewritten from [ng-busy](https://github.com/victos/angular-opensource/tree/maste
 
 ## Demo
 
-[https://github.com/noskap/angular-opensource/tree/master/projects/ng-busy/](https://github.com/noskap/angular-opensource/tree/master/projects/ng-busy/)
+[https://github.com/noskap/ng-busy-observable/](https://github.com/noskap/ng-busy-observable/)
 
 ## Installation
 

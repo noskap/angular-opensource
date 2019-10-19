@@ -18,7 +18,7 @@
     ],
     "paths": {
       "ng-busy": [
-        "dist/ng-busy"
+        "dist/ng-busy-observable"
       ]
     }
   }
