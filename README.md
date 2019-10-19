@@ -1,6 +1,6 @@
 **For Angular 6**
 
-NgBusy can show busy/loading indicators on any promise, Observable, or on any Observable's subscription.
+NgBusy can show busy/loading indicators on any Promise, Observable, or on any Observable's subscription.
 
 [![npm Downloads](https://img.shields.io/npm/dw/ng-busy-observable.svg?style=flat-square)](https://www.npmjs.com/package/ng-busy-observable)
 
