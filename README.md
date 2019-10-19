@@ -47,7 +47,7 @@ export class AppModule {}
 ```
 
 
-Reference your promise in the `ngBusy` directive:
+Reference your Promise in the `ngBusy` directive:
 
 ```ts
 import {Component, OnInit} from '@angular/core';
