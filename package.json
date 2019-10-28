@@ -1,22 +1,22 @@
 {
-  "name": "ng-busy-observable",
-  "version": "8.0.0",
   "description": "Show busy/loading indicators on any promise, observable or subscription",
-  "author": "noskap",
+  "name": "ng-busy",
+  "version": "8.0.1",
+  "author": "victos",
   "license": "MIT",
   "scripts": {
-    "prebuild": "rimraf ./dist/ng-busy-observable",
-    "build": "ng build ng-busy-observable --prod",
-    "postbuild": "lessc src/lib/style/busy.less ./dist/ng-busy-observable/src/style/busy.css",
-    "publish": "npm run build && npm publish ./dist/ng-busy-observable"
+    "prebuild": "rimraf ./dist/ng-busy",
+    "build": "ng build ng-busy --prod",
+    "postbuild": "lessc src/lib/style/busy.less ./dist/ng-busy/src/style/busy.css",
+    "publish": "npm run build && npm publish ./dist/ng-busy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noskap/ng-busy-observable.git"
+    "url": "git+https://github.com/victos/angular-opensource.git"
   },
-  "homepage": "https://github.com/noskap/ng-busy-observable",
+  "homepage": "https://github.com/victos/angular-opensource/tree/master/projects/ng-busy",
   "bugs": {
-    "url": "https://github.com/noskap/ng-busy-observable"
+    "url": "https://github.com/victos/angular-opensource"
   },
   "keywords": [
     "angular",
@@ -41,19 +41,5 @@
     "@angular/core": "^8.2.12",
     "@angular/animations": "^8.2.12",
     "rxjs": "^6.0.0"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.6.0",
-    "@angular-devkit/build-ng-packagr": "~0.6.0",
-    "@angular/animations": "^8.2.12",
-    "@angular/common": "^8.2.12",
-    "@angular/compiler": "^8.2.12",
-    "@angular/compiler-cli": "^8.2.12",
-    "@angular/core": "^8.2.12",
-    "ng-packagr": "^3.0.0-rc.2",
-    "rxjs": "^6.0.0",
-    "tsickle": ">=0.25.5",
-    "tslib": "^1.7.1",
-    "typescript": "~2.9.2"
   }
 }
