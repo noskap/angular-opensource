@@ -47,7 +47,7 @@
     "@angular-devkit/build-ng-packagr": "~0.6.0",
     "@angular/animations": "^8.2.12",
     "@angular/common": "^8.2.12",
-    "@angular/compiler": "^6.0.0",
+    "@angular/compiler": "^8.2.12",
     "@angular/compiler-cli": "^8.2.12",
     "@angular/core": "^8.2.12",
     "ng-packagr": "^3.0.0-rc.2",
