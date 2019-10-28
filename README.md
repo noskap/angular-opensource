@@ -1,29 +1,38 @@
-**For Angular 6**
+**Notice**
 
-NgBusy can show busy/loading indicators on any Promise, Observable, or on any Observable's subscription.
+1.x version is used for angular 5.x
 
-[![npm Downloads](https://img.shields.io/npm/dw/ng-busy-observable.svg?style=flat-square)](https://www.npmjs.com/package/ng-busy-observable)
+6.x version is used for angular 6.x
+
+7.x version is used for angular 7.x
+
+8.x version is used for angular 8.x
+
+**NgBusy** can show busy/loading indicators on any Promise, Observable, or on any Observable's subscription.
+
+[![Travis](https://img.shields.io/travis/victos/angular-opensource/master.svg?label=Travis%20CI&style=flat-square)](https://travis-ci.org/victos/angular-opensource)
+[![npm Downloads](https://img.shields.io/npm/dw/ng-busy.svg?style=flat-square)](https://www.npmjs.com/package/ng-busy)
 
 ![demo](https://raw.githubusercontent.com/devyumao/devyumao.github.io/master/angular2-busy/img/demo.gif)
 
-Rewritten from [ng-busy](https://github.com/victos/angular-opensource/tree/master/projects/ng-busy), to allow plain observables.
+Rewritten from [angular2-busy](https://github.com/devyumao/angular2-busy), and add some new features in terms of Angular 2.
 
 ### Built with Angular 6.0.0
 
 ## Demo
 
-[https://github.com/noskap/ng-busy-observable/](https://github.com/noskap/ng-busy-observable/)
+[https://github.com/victos/angular-opensource/tree/master/projects/ng-busy/](https://github.com/victos/angular-opensource/tree/master/projects/ng-busy/)
 
 ## Installation
 
 ```shell
-npm install --save ng-busy-observable
+npm install --save ng-busy
 ```
 
 ## Link CSS
 
 ```html
-<link rel="stylesheet" href="/node_modules/ng-busy-observable/src/style/busy.less">
+<link rel="stylesheet" href="/node_modules/ng-busy/src/style/busy.css">
 ```
 
 ## Getting Started
@@ -33,7 +42,7 @@ Import the `NgBusyModule` in your root application module:
 ```ts
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgBusyModule} from 'ng-busy-observable';
+import {NgBusyModule} from 'ng-busy';
 
 @NgModule({
 	imports: [
@@ -149,7 +158,7 @@ In other words, you may use flexible syntax:
 | delay | Optional | 0 | The amount of time to wait until showing the indicator. Specified in milliseconds.
 | minDuration | Optional | 0 | The amount of time to keep the indicator showing even if the busy thing was completed quicker. Specified in milliseconds.|
 | disableAnimation | Optional | false | Disable the animation when the spinner appear |
-| wrapperClass | Optional | 'ng-busy-observable' | The name(s) of the CSS classes to be applied to the wrapper element of the indicator. |
+| wrapperClass | Optional | 'ng-busy' | The name(s) of the CSS classes to be applied to the wrapper element of the indicator. |
 | templateNgStyle | Optional | { } | An object that will be assigned to the custom component assigned to `template` option, if one was configured (see example below in Overriding Defaults). |
 
 
@@ -161,7 +170,7 @@ In the root application module, you can do this:
 
 ```ts
 import {NgModule} from '@angular/core';
-import {NgBusyModule, BusyConfig} from 'ng-busy-observable';
+import {NgBusyModule, BusyConfig} from 'ng-busy';
 import {CustomBusyComponent} from '...'
 
 @NgModule({
@@ -227,9 +236,8 @@ export class CustomBusyComponent {
 
 ## Credits
 
-Rewritten from [ng-busy](https://github.com/victos/angular-opensource/tree/master/projects/ng-busy), to allow plain observables.
-Which is also rewritten from [devyumao](https://github.com/devyumao)'s [angular2-busy](https://github.com/devyumao/angular2-busy).
+Rewritten from [devyumao](https://github.com/devyumao)'s [angular2-busy](https://github.com/devyumao/angular2-busy).
 
 ## LICENSE
 
-This project is licensed under the MIT license. See the [LICENSE](https://github.com/noskap/ng-busy/blob/master/LICENSE) file for more info.
+This project is licensed under the MIT license. See the [LICENSE](https://github.com/victos/ng-busy/blob/master/LICENSE) file for more info.

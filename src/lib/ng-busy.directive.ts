@@ -13,9 +13,9 @@ import {
     Renderer2,
     TemplateRef,
     Type,
-    ViewContainerRef
+    ViewContainerRef,
+    ViewRef
 } from '@angular/core';
-import {ViewRef} from '@angular/core/src/linker/view_ref';
 import {BusyTrackerService} from './service/busy-tracker.service';
 import {BusyConfigHolderService} from './service/busy-config-holder.service';
 import {Observable, Subscription} from 'rxjs';

@@ -3,18 +3,18 @@ import {async, ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/t
 import {BusyTrackerService} from './service/busy-tracker.service';
 import {BusyConfigHolderService} from './service/busy-config-holder.service';
 import {
-  ApplicationRef,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  DebugElement,
-  ElementRef,
-  Inject,
-  Injector,
-  Renderer2,
-  TemplateRef,
-  ViewChild,
-  ViewContainerRef
+    ApplicationRef,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    DebugElement,
+    ElementRef,
+    Inject,
+    Injector,
+    Renderer2,
+    TemplateRef,
+    ViewChild,
+    ViewContainerRef
 } from '@angular/core';
 import {By} from '@angular/platform-browser';
 import {NgBusyModule} from './ng-busy.module';
@@ -67,13 +67,15 @@ export class CustomBusyComponent {
 @Component({
     template: `
         <ng-template #customTemplate>
-            <div class="custom_template_for_test" style="margin-top: 110px; text-align: center;">Hi, This is from ng-template.</div>
+            <div class="custom_template_for_test" style="margin-top: 110px; text-align: center;">Hi, This is from
+                ng-template.
+            </div>
         </ng-template>
         <div class="ng-busy-container-for-test" [ngBusy]="options"></div>`
 })
 class TestNgBusyComponent {
     options: any;
-    @ViewChild('customTemplate')
+    @ViewChild('customTemplate', {static: true})
     customTemplate: TemplateRef<any>;
 }
 

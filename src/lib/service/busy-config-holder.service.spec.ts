@@ -6,7 +6,10 @@ import {BusyConfig} from '../model/busy-config';
 describe('BusyConfigHolderService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [BusyConfigHolderService, {provide: BusyConfig, useValue: {message: 'the message should be this'}}]
+            providers: [BusyConfigHolderService, {
+                provide: BusyConfig,
+                useValue: {message: 'the message should be this'}
+            }]
         });
     });
 
